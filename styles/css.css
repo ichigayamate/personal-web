@@ -1,3 +1,12 @@
+/*
+POWERED BY TAILWIND CSS!
+DO NOT ADD UNLESS IT IS REQUIRED
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
