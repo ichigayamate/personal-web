@@ -74,11 +74,11 @@ const themeColor = {
 }
 
 const breakpoints = {
-  'sm': '30em',
-  'md': '48em',
-  'lg': '62em',
-  'xl': '80em',
-  '2xl': '96em'
+  'sm': '30rem',
+  'md': '48rem',
+  'lg': '62rem',
+  'xl': '80rem',
+  '2xl': '96rem'
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -87,14 +87,16 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./lib/**/*.{js,ts,jsx,tsx}",
   ],
-  important: true,
-  darkMode: ["class", "[data-theme='dark']", "chakra-ui-dark"],
+  darkMode: "class",
   theme: {
     screens: {
       ...breakpoints
     },
     extend: {
       colors: {
+        ...themeColor
+      },
+      background: {
         ...themeColor
       }
     }

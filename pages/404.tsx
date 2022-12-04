@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const insertText = (text) => {
     const preOutput = document.querySelectorAll(".pre-output")[0];
@@ -13,6 +14,7 @@ const insertText = (text) => {
 
 function ActionButtons() {
     const router = useRouter();
+    const { setTheme } = useTheme();
 
     const helpHandler = () => {
         insertText("Ichigayamate Personal Website, version 1.0.0-release (x86_64-nodejs-nextjs)");
@@ -22,6 +24,7 @@ function ActionButtons() {
         insertText("");
         insertText("about");
         insertText("back");
+        insertText("exit");
         insertText("darkmode [-auto|-disable]");
         insertText("home");
         insertText("help [-dms] [pattern...]");
@@ -32,13 +35,19 @@ function ActionButtons() {
     const darkmodeHandler = (v) => {
         const value = v.split(" ");
         if (value.length == 1) {
-            insertText(value[0] + ": Missing operand");
-            insertText("Try '" + value[0] + " --help' for more information.<br>");
+            setTheme("dark");
+            insertText(" ");
         } else if (value[1] == "-h" || value[1] == "-help" || value[1] == "--h" || value[1] == "--help") {
             insertText("Usage: " + value[0] + " [OPTION]...");
             insertText("Sets or disables dark mode in this website<br>");
             insertText("    --disable   Disables dark mode (enables light mode)");
             insertText("    --auto      Use system dark mode preferences<br>");
+        } else if (value[1] == "-disable" || value[1] == "--disable" || value[1] == "-off" || value[1] == "--off") {
+            setTheme("light");
+            insertText(" ");
+        } else if (value[1] == "-auto" || value[1] == "--auto" || value[1] == "-system" || value[1] == "--system") {
+            setTheme("system");
+            insertText(" ");
         } else {
             insertText(value[0] + ": unknown option " + value[1]);
             insertText("Try '" + value[0] + " --help' for more information.<br>");
@@ -50,10 +59,10 @@ function ActionButtons() {
             let route = e.target.value;
             insertText("$ " + route);
             document.getElementById("input-wrapper").style.display = 'none';
-            document.getElementById("input").value = '';
+            (document.getElementById("input") as HTMLInputElement).value = '';
             const timer = setTimeout(() => {
                 const preOuter = document.querySelector("#black-window div");
-                const input = document.querySelector("#input-wrapper");
+                const input = document.querySelector("#input-wrapper") as HTMLDivElement;
                 input.style.display = 'block';
                 input.querySelector("input").focus();
                 preOuter.scrollTop = preOuter.clientHeight;
@@ -88,6 +97,17 @@ function ActionButtons() {
                 case "darkmode":
                     darkmodeHandler(route);
                     break;
+                case "npm":
+                    insertText("Command not allowed for use inside browser.");
+                    insertText("");
+                    insertText("npm@8.5.0 ~/nodejs/node_modules/npm");
+                    break;
+                case "npx":
+                    insertText("npm <span class=\"text-red-500\">ERR!</span> Command not allowed for use inside browser.");
+                    insertText("");
+                    insertText("npm <span class=\"text-red-500\">ERR!</span> A complete log of this run can be found in:");
+                    insertText("npm <span class=\"text-red-500\">ERR!</span> &nbsp;&nbsp;&nbsp; <span className=\"hover:underline hover:cursor-pointer\">/ichigayamate-personal-web/_logs/"+ new Date().toISOString().replace(/:/gi, "_") +"-navigation.log</span>")
+                    break;
                 case "reload":
                     router.reload();
                     break;
@@ -98,6 +118,9 @@ function ActionButtons() {
                     router.back();
                     break;
                 case "/back":
+                    router.back();
+                    break;
+                case "exit": 
                     router.back();
                     break;
                 case "clear":
@@ -144,19 +167,19 @@ function ActionButtons() {
         <motion.div initial={{ display: "none" }} animate={{ display: "block", transition: { duration: 0.1, delay: 1.7 } }}>
             <div className="block lg:hidden">
                 Choose action: <br />
-                <Link href="/"><a className="text-purple-500 hover:underline">&gt; Home</a></Link><br />
+                <Link href="/" className="text-purple-500 hover:underline">&gt; Home</Link><br />
                 <button className="text-purple-500 hover:underline" onClick={() => router.back()}>&gt; Go Back</button><br />
-                <Link href="/sitemap"><a className="text-purple-500 hover:underline">&gt; Sitemap</a></Link><br />
+                <Link href="/sitemap" className="text-purple-500 hover:underline">&gt; Sitemap</Link><br />
             </div>
             <div id="input-wrapper" className="hidden lg:block">$ <input autoComplete="off" id="input" type="text" className="w-11/12 bg-transparent focused outline-none" onKeyDown={changeHandler} /></div>
         </motion.div>
-    )
+    );
 }
 
 function Display() {
-    const [url, setUrl] = useState();
-    const [href, setHref] = useState();
-    const [dateNow, setDateNow] = useState();
+    const [url, setUrl] = useState<string>();
+    const [href, setHref] = useState<string>();
+    const [dateNow, setDateNow] = useState<string>();
 
     const dirClickHandler = (val) => {
         insertText("$ " + val);
@@ -167,7 +190,7 @@ function Display() {
         setDateNow(new Date().toISOString().replace(/:/gi, "_"));
         setUrl(location.pathname);
         setHref(location.href);
-        const timeout = setTimeout(() => { document.querySelector("#input").focus() }, 1700);
+        const timeout = setTimeout(() => { (document.querySelector("#input") as HTMLInputElement).focus() }, 1700);
 
         return(
             clearTimeout(timeout)
@@ -190,7 +213,7 @@ function Display() {
                     <span className="hidden md:inline-block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span>&nbsp;</span><span className="text-red-500 md:text-current">Not Found - GET {href} - Not Found</span><br />
                     <span className="hidden md:inline-block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span> </span><br />
                     <span className="hidden md:inline-block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span>&nbsp;</span>{url} is not in this site.<br />
-                    <span className="hidden md:inline-block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span> You shuld check any URL typed (or just visit <Link href="/"><a className="hover:underline">home</a></Link>!)<br /></span>
+                    <span className="hidden md:inline-block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span> You shuld check any URL typed (or just visit <Link href="/" className="text-white hover:underline">home</Link>!)<br /></span>
                     <span className="hidden md:block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span></span>
                     <span className="hidden md:inline-block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span> Note that you can also visit from a<br /></span>
                     <span className="hidden md:block">web <span className="text-red-500">ERR!</span> <span className="text-purple-500">404</span> sitemap if desired.</span><br />
@@ -203,7 +226,7 @@ function Display() {
             </div>
             <ActionButtons />
         </pre>
-    )
+    );
 }
 
 export default function NotFoundPage() {
