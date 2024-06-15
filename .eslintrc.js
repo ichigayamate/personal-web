@@ -4,10 +4,10 @@ const restrictedGlobals = require("confusing-browser-globals");
 module.exports = {
   // extends prettier by default
   // also extends next/core-web-vitals if uses next.js
-  extends: ["prettier", "next/core-web-vitals"],
-
+  
   // imported from eslint-plugin-react-app
   plugins: ["import", "flowtype", "jsx-a11y"],
+  extends: ["prettier", "next/core-web-vitals"],
 
   overrides: [
     {

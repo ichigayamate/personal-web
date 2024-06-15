@@ -24,6 +24,26 @@
       }
     ]
   },
+  "paths": {
+    "@root_component": [
+      "./lib/components/pages/root"
+    ],
+    "@page_component": [
+      "./lib/components/pages"
+    ],
+    "@ui": [
+      "./lib/components/ui"
+    ],
+    "@types": [
+      "./lib/utils/types"
+    ],
+    "@script": [
+      "./lib/utils/scripts"
+    ],
+    "@app": [
+      "./app/"
+    ]
+  },
   "include": [
     "next-env.d.ts",
     "**/*.ts",

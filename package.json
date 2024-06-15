@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "packageManager": "yarn@4.1.1",
   "dependencies": {
+    "@headlessui/react": "^2.0.4",
     "next": "^15.0.0-rc.0",
     "react": "^19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "^19.0.0-rc-fb9a90fa48-20240614"
