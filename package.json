@@ -1,46 +1,33 @@
 {
   "name": "personal-web",
-  "version": "1.0.0",
-  "private": true,
+  "version": "2.0.0",
+  "packageManager": "yarn@4.1.1",
+  "dependencies": {
+    "next": "^15.0.0-rc.0",
+    "react": "^19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "^19.0.0-rc-fb9a90fa48-20240614"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-regular-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@headlessui/react": "^1.7.18",
-    "@popperjs/core": "^2.11.8",
-    "framer-motion": "^7.10.3",
-    "next": "^13.5.6",
-    "next-seo": "^5.15.0",
-    "next-themes": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-popper": "^2.3.0",
-    "react-sticky-box": "^1.0.2",
-    "react-web-share": "^2.0.2",
-    "yarn": "^1.22.19"
-  },
   "devDependencies": {
-    "@types/node": "18.19.19",
-    "@types/react": "18.2.60",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.28.0",
-    "eslint-config-next": "^13.5.6",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "postcss": "^8.4.35",
-    "postcss-import": "^15.1.0",
-    "postcss-nesting": "^10.2.0",
-    "tailwindcss": "^3.4.1",
-    "turbo": "^1.12.4",
-    "typescript": "4.9.5"
+    "@types/confusing-browser-globals": "^1",
+    "@types/node": "20.14.2",
+    "@types/react": "18.3.3",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "prettier": "^3.3.2",
+    "typescript": "5.4.5",
+    "typescript-eslint": "^7.13.0"
   }
 }
