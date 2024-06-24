@@ -41,6 +41,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-import", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:2.29.1"],\
           ["eslint-plugin-jsx-a11y", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:6.8.0"],\
           ["next", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:15.0.0-rc.0"],\
+          ["next-themes", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:0.3.0"],\
           ["postcss", "npm:8.4.38"],\
           ["prettier", "npm:3.3.2"],\
           ["react", "npm:19.0.0-rc-fb9a90fa48-20240614"],\
@@ -4242,6 +4243,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["next-themes", [\
+      ["npm:0.3.0", {\
+        "packageLocation": "../../../../C:/Users/windr/AppData/Local/Yarn/Berry/cache/next-themes-npm-0.3.0-624efd7b90-10c0.zip/node_modules/next-themes/",\
+        "packageDependencies": [\
+          ["next-themes", "npm:0.3.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:0.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/next-themes-virtual-9afff5c65d/5/C:/Users/windr/AppData/Local/Yarn/Berry/cache/next-themes-npm-0.3.0-624efd7b90-10c0.zip/node_modules/next-themes/",\
+        "packageDependencies": [\
+          ["next-themes", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:0.3.0"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", null],\
+          ["react", "npm:19.0.0-rc-fb9a90fa48-20240614"],\
+          ["react-dom", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:19.0.0-rc-fb9a90fa48-20240614"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["node-gyp", [\
       ["npm:10.1.0", {\
         "packageLocation": "./.yarn/unplugged/node-gyp-npm-10.1.0-bdea7d2ece/node_modules/node-gyp/",\
@@ -4549,6 +4576,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-import", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:2.29.1"],\
           ["eslint-plugin-jsx-a11y", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:6.8.0"],\
           ["next", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:15.0.0-rc.0"],\
+          ["next-themes", "virtual:82eccec3ff0353f312611caa49d21db3689f03f9da131bc15bc782aa3625b28f61be49300338bb42872ce7c9528ace5f010c42631e5b9ebf426e7b56442e9b8a#npm:0.3.0"],\
           ["postcss", "npm:8.4.38"],\
           ["prettier", "npm:3.3.2"],\
           ["react", "npm:19.0.0-rc-fb9a90fa48-20240614"],\
