@@ -1,9 +1,20 @@
-import { ThemeProvider } from "next-themes";
+"use client";
+
+import { usePathname } from "next/navigation";
+import Footer from "./footer";
 
 export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>;
+  const pathname = usePathname();
+  if (pathname === "/") return children;
+
+  return (
+    <>
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 }
