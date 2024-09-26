@@ -7,5 +7,9 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "sonarlint.connectedMode.project": {
+    "connectionId": "SonarCloud",
+    "projectKey": "ichigayamate_personal-web"
+  }
 }
