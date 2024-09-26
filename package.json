@@ -1,7 +1,7 @@
 {
   "name": "personal-web",
   "version": "2.0.0",
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "yarn@4.5.0",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
