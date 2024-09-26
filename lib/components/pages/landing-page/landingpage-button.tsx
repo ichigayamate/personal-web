@@ -6,13 +6,13 @@ import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import React from "react";
 import Link from "next/link";
 
-interface NewButtonProps {
+interface LandingPageButtonProps {
   icon: IconDefinition;
   children: React.ReactNode;
   link: string;
 }
 
-const Button: React.FC<NewButtonProps> = ({ icon, children, link }) => {
+const LandingPageButton: React.FC<LandingPageButtonProps> = ({ icon, children, link }) => {
   return (
     <Link href={link} passHref legacyBehavior>
       <HButton
@@ -32,4 +32,4 @@ const Button: React.FC<NewButtonProps> = ({ icon, children, link }) => {
   );
 };
 
-export default Button;
+export default LandingPageButton;
