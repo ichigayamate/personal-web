@@ -69,6 +69,7 @@ module.exports = {
         ],
         "no-useless-constructor": "off",
         "@typescript-eslint/no-useless-constructor": "warn",
+        "@typescript-eslint/no-explicit-any": "error"
       },
     },
   ],
@@ -218,6 +219,7 @@ module.exports = {
     "react/jsx-no-duplicate-props": "warn",
     "react/jsx-no-target-blank": "warn",
     "react/jsx-no-undef": "error",
+    "react/hook-use-state": ["warn", {"allowDestructuredState": true}],
     "react/jsx-pascal-case": [
       "warn",
       {
