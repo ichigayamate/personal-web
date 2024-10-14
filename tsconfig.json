@@ -25,8 +25,8 @@
     "paths": {
       "@page_component/*": ["./lib/components/pages/*"],
       "@ui/*": ["./lib/components/ui/*"],
-      "@types/*": ["./lib/utils/types/*"],
-      "@scripts/*": ["./lib/utils/scripts/*"],
+      "@interfaces/*": ["./lib/interfaces/*"],
+      "@scripts/*": ["./lib/scripts/*"],
       "@app/*": ["./app/*"]
     }
   },
