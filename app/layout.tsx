@@ -13,11 +13,7 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  main,
-  sidebar,
 }: Readonly<{
-  main: React.ReactNode;
-  sidebar: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
@@ -26,9 +22,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class">
           <noscript>You need to enable JavaScript to run this app</noscript>
           <div id="root">
-            <Layout>              
-              {main}
-              {sidebar}
+            <Layout>
               {children}
             </Layout>
           </div>

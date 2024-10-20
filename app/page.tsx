@@ -1,12 +1,11 @@
-"use client";
-
 import { faContactCard } from "@fortawesome/free-regular-svg-icons";
 import { faNewspaper, faPhone } from "@fortawesome/free-solid-svg-icons";
 import LandingPageButton from "@page_component/landing-page/landingpage-button";
+import Backdrop from "@page_component/root/backdrop/i10e-backdrop";
 
 function Page() {
   return (
-    <>
+    <Backdrop>
       <div className="text-center">
         <h1 className="font-bold font-mono text-3xl my-2">Hello World!👋🏻</h1>
         <p className="font-mono">
@@ -18,14 +17,14 @@ function Page() {
         <LandingPageButton icon={faContactCard} link="/about">
           About Me
         </LandingPageButton>
-        <LandingPageButton icon={faNewspaper} link="/portfolio">
-          Portfolio
+        <LandingPageButton icon={faNewspaper} link="/projects">
+          Projects and Portofolio
         </LandingPageButton>
         <LandingPageButton icon={faPhone} link="/contact">
           Contact
         </LandingPageButton>
       </div>
-    </>
+    </Backdrop>
   );
 }
 

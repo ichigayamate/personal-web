@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Footer from "./footer";
+import Navbar from "./navbar";
 
 export default function Layout({
   children,
@@ -13,6 +14,7 @@ export default function Layout({
 
   return (
     <>
+      <Navbar />
       <main>{children}</main>
       <Footer />
     </>
