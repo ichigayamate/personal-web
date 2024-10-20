@@ -11,7 +11,7 @@ function Page() {
         <h1 className="font-bold font-mono text-3xl my-2">Hello World!👋🏻</h1>
         <p className="font-mono">
           Just call me Ichigayamate, a front-end web developer and an IT
-          Architecture Staff.
+          Infrastructure Specialist.
         </p>
       </div>
       <div className="mt-4 lg:grid lg:grid-cols-2 gap-1">

@@ -2,7 +2,6 @@
 
 import BashBox from "@page_component/about/block-code";
 import BackButton from "@ui/button/back-button";
-import { useContext } from "react";
 
 export default function AboutPage() {
   return (
