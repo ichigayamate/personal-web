@@ -261,10 +261,5 @@ module.exports = {
     "jsx-a11y/role-has-required-aria-props": "warn",
     "jsx-a11y/role-supports-aria-props": "warn",
     "jsx-a11y/scope": "warn",
-
-    // https://github.com/gajus/eslint-plugin-flowtype
-    "flowtype/define-flow-type": "warn",
-    "flowtype/require-valid-file-annotation": "warn",
-    "flowtype/use-flow-type": "warn",
   },
 };
