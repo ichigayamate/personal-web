@@ -1,12 +1,14 @@
-"use client";
-
 import BashBox from "@page_component/about/block-code";
-import Backdrop from "@page_component/root/backdrop/i10e-backdrop";
 import BackButton from "@ui/button/back-button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function AboutPage() {
   return (
-    <Backdrop>
+    <div className="bg-white/50 dark:bg-black/50 px-4 py-2 rounded-t-md h-screen">
       <div className="flex items-center gap-4 mb-4">
         <BackButton />
         <h1 className="font-mono text-3xl font-bold flex-grow">About</h1>
@@ -48,6 +50,6 @@ export default function AboutPage() {
           Apex Legends, and AAA based games), watching anime, and reading manga.
         </BashBox.Text>
       </BashBox>
-    </Backdrop>
+    </div>
   );
 }
