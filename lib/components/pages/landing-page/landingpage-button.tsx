@@ -12,7 +12,11 @@ interface LandingPageButtonProps {
   link: string;
 }
 
-const LandingPageButton: React.FC<LandingPageButtonProps> = ({ icon, children, link }) => {
+const LandingPageButton: React.FC<LandingPageButtonProps> = ({
+  icon,
+  children,
+  link,
+}) => {
   return (
     <Link href={link} passHref legacyBehavior>
       <HButton
