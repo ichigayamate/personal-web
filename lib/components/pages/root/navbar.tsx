@@ -23,7 +23,10 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex justify-end">
-            <DarkModePopup className={NAVBAR_BUTTON_CLASSNAME} anchor={{to: "bottom end", gap: "0.25rem"}} />
+            <DarkModePopup
+              className={NAVBAR_BUTTON_CLASSNAME}
+              anchor={{ to: "bottom end", gap: "0.25rem" }}
+            />
           </div>
         </div>
       </Container>
